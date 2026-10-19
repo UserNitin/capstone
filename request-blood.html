@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Blood | BloodConnect 360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-request">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt=""> BloodConnect 360</a>
+      <button class="menu-btn" id="menuBtn" type="button">Menu</button>
+      <div class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner banner-request">
+    <div class="wrap">
+      <p class="eyebrow">Blood request</p>
+      <h1>Ask for the unit you need</h1>
+      <p>Share the blood group, hospital, and how soon it is needed.</p>
+    </div>
+  </div>
+
+  <div class="wrap lift">
+    <div class="split">
+      <div class="side-photo">
+        <div>
+          <h2>Every unit is checked.</h2>
+          <p>This form saves the request in the database. Call a hospital in a real emergency.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <form id="requestForm">
+          <div class="form-grid">
+            <label>Your name
+              <input id="reqName" type="text" required placeholder="Full name">
+            </label>
+            <label>Email
+              <input id="reqEmail" type="email" required placeholder="you@example.com">
+            </label>
+            <label>Blood group
+              <select id="reqBlood" required>
+                <option value="">Select blood group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+              </select>
+            </label>
+            <label>Units needed
+              <select id="reqUnits">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </label>
+            <label>City
+              <input id="reqCity" type="text" required placeholder="City">
+            </label>
+            <label>Urgency
+              <select id="reqUrgency">
+                <option>Urgent</option>
+                <option>Within 24 hours</option>
+                <option>Planned</option>
+              </select>
+            </label>
+            <label class="full">Hospital
+              <input id="reqHospital" type="text" required placeholder="Hospital name">
+            </label>
+            <label class="full">Notes
+              <textarea id="reqNotes" rows="4" placeholder="Optional details"></textarea>
+            </label>
+          </div>
+          <button class="btn" type="submit">Submit request</button>
+          <p id="requestMessage" class="message"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <h2>Saved requests</h2>
+        <p>Newest requests appear first.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="requestList"></table>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-inner">
+      <div>
+        <b>BloodConnect 360</b>
+        <p>Find donors and save blood requests in the database.</p>
+      </div>
+      <div>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <p class="fine">Photos from blood camps in Howrah, Baranagar, and Karnataka, via Wikimedia Commons. A hospital must verify every unit.</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

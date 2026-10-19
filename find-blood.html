@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Blood | BloodConnect 360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-find">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt=""> BloodConnect 360</a>
+      <button class="menu-btn" id="menuBtn" type="button">Menu</button>
+      <div class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner banner-find">
+    <div class="wrap">
+      <p class="eyebrow">Donor directory</p>
+      <h1>Find blood donors</h1>
+      <p>Search by blood group, city, and who is ready to donate.</p>
+    </div>
+  </div>
+
+  <div class="wrap lift">
+    <div class="panel">
+      <div class="filters">
+        <label>Blood group
+          <select id="bloodFilter">
+            <option value="">All blood groups</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+          </select>
+        </label>
+        <label>City
+          <input id="cityFilter" type="text" placeholder="Search city">
+        </label>
+        <label>Availability
+          <select id="availabilityFilter">
+            <option value="">All donors</option>
+            <option value="Available">Available</option>
+            <option value="Not available">Not available</option>
+          </select>
+        </label>
+        <button class="btn btn-line" id="clearFilters" type="button">Reset</button>
+      </div>
+    </div>
+
+    <div class="countline">
+      <p id="resultCount">Showing donors</p>
+      <a class="btn" href="request-blood.html">Create Blood Request</a>
+    </div>
+    <div class="table-wrap">
+      <table id="donorTable"></table>
+    </div>
+    <p class="note"><b>Note:</b> This list shows donors saved in the database.</p>
+  </div>
+
+  <div class="footer">
+    <div class="footer-inner">
+      <div>
+        <b>BloodConnect 360</b>
+        <p>Find donors and save blood requests in the database.</p>
+      </div>
+      <div>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+        <a href="login.html">Login</a>
+      </div>
+      <p class="fine">Photos from blood camps in Howrah, Baranagar, and Karnataka, via Wikimedia Commons. A hospital must verify every unit.</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

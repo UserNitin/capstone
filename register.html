@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | BloodConnect 360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-register">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt=""> BloodConnect 360</a>
+      <button class="menu-btn" id="menuBtn" type="button">Menu</button>
+      <div class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="auth">
+      <div class="auth-photo auth-register">
+        <div>
+          <h2>Your time could help save a life.</h2>
+          <p>Add your blood group and city so people nearby can find you.</p>
+        </div>
+      </div>
+      <div class="auth-form">
+        <p class="eyebrow">Join</p>
+        <h1>Create your account</h1>
+        <p>This form saves your profile in the database.</p>
+        <form id="registerForm">
+          <div class="form-grid">
+            <label>Full name
+              <input id="regName" type="text" required placeholder="Your full name">
+            </label>
+            <label>Role
+              <select id="regRole">
+                <option value="donor">Donor</option>
+                <option value="requester">Requester</option>
+                <option value="hospital">Hospital</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+            <label>Email address
+              <input type="email" id="regEmail" required placeholder="you@example.com">
+            </label>
+            <label>Password
+              <input type="password" id="regPassword" required minlength="4" placeholder="At least 4 characters" autocomplete="new-password">
+            </label>
+            <label>Blood group
+              <select id="regBlood">
+                <option value="">Select group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>Not applicable</option>
+              </select>
+            </label>
+            <label class="full">City
+              <input id="regCity" type="text" required placeholder="e.g. Ahmedabad">
+            </label>
+          </div>
+          <label class="check">
+            <input type="checkbox" id="regAvailable">
+            I am available to donate
+          </label>
+          <button class="btn" type="submit">Create account</button>
+          <p id="registerMessage" class="message"></p>
+        </form>
+        <p>Already registered? <a href="login.html">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-inner">
+      <div>
+        <b>BloodConnect 360</b>
+        <p>Find donors and save blood requests in the database.</p>
+      </div>
+      <div>
+        <a href="login.html">Login</a>
+        <a href="find-blood.html">Find Blood</a>
+      </div>
+      <p class="fine">Photos from blood camps in Howrah, Baranagar, and Karnataka, via Wikimedia Commons. A hospital must verify every unit.</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

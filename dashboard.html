@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | BloodConnect 360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-dash">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt=""> BloodConnect 360</a>
+      <button class="menu-btn" id="menuBtn" type="button">Menu</button>
+      <div class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="section">
+      <div class="welcome">
+        <p class="eyebrow">Your account</p>
+        <h1 id="dashboardTitle">Dashboard</h1>
+        <p id="dashboardSubtitle">Log in to see your account.</p>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><span>Registered donors</span><b id="kpiDonors">0</b></div>
+      <div class="kpi"><span>Available now</span><b id="kpiAvailable">0</b></div>
+      <div class="kpi"><span>Saved requests</span><b id="kpiRequests">0</b></div>
+    </div>
+
+    <p class="actions" style="margin-top:18px">
+      <a class="btn" href="find-blood.html">Find donors</a>
+      <a class="btn" href="request-blood.html">Create request</a>
+      <a class="btn btn-line" href="register.html">Update profile</a>
+      <button class="btn btn-line" id="logoutBtn" type="button">Sign out</button>
+    </p>
+
+    <div class="section">
+      <div class="section-head">
+        <h2>Recent requests</h2>
+        <p>Saved in the database.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="dashboardRequests"></table>
+      </div>
+      <p class="note"><b>Note:</b> Accounts and requests are stored in the database. A hospital must still verify the blood.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-inner">
+      <div>
+        <b>BloodConnect 360</b>
+        <p>Find donors and save blood requests in the database.</p>
+      </div>
+      <div>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+      </div>
+      <p class="fine">Photos from blood camps in Howrah, Baranagar, and Karnataka, via Wikimedia Commons. A hospital must verify every unit.</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

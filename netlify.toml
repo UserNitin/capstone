@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Send /api/register, /api/login, and the other API calls to the function.
+# force = true so Netlify does not look for a real file at that address.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# Keep the database file off the public site if it is uploaded by mistake.
+[[redirects]]
+  from = "/data/*"
+  to = "/404"
+  status = 404
+  force = true

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | BloodConnect 360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-login">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt=""> BloodConnect 360</a>
+      <button class="menu-btn" id="menuBtn" type="button">Menu</button>
+      <div class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="find-blood.html">Find Blood</a>
+        <a href="request-blood.html">Request Blood</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="auth">
+      <div class="auth-photo auth-login">
+        <div>
+          <h2>Welcome back.</h2>
+          <p>Sign in with the email and password saved in the database.</p>
+        </div>
+      </div>
+      <div class="auth-form">
+        <p class="eyebrow">Sign in</p>
+        <h1>Use your email</h1>
+        <p>Your account is stored in the SQLite database, not only in this browser.</p>
+        <form id="loginForm">
+          <label>Email address
+            <input type="email" id="loginEmail" placeholder="you@example.com" required>
+          </label>
+          <label>Password
+            <input type="password" id="loginPassword" placeholder="Your password" required>
+          </label>
+          <button class="btn" type="submit">Sign in</button>
+          <p id="loginMessage" class="message"></p>
+        </form>
+        <p>New here? <a href="register.html">Create an account</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-inner">
+      <div>
+        <b>BloodConnect 360</b>
+        <p>Find donors and save blood requests in the database.</p>
+      </div>
+      <div>
+        <a href="register.html">Register</a>
+        <a href="find-blood.html">Find Blood</a>
+      </div>
+      <p class="fine">Photos from blood camps in Howrah, Baranagar, and Karnataka, via Wikimedia Commons. A hospital must verify every unit.</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
