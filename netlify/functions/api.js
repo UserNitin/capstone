@@ -1,3 +1,4 @@
+var connectLambda = require("@netlify/blobs").connectLambda;
 var handle = require("../../lib/routes").handle;
 var createBlobStore = require("../../lib/blob-store").createBlobStore;
 
@@ -25,6 +26,16 @@ function apiPath(event) {
 }
 
 exports.handler = async function (event) {
+  // Lambda-style functions do not get Blobs credentials automatically.
+  try {
+    connectLambda(event);
+  } catch (error) {
+    console.error(error);
+    return json(500, {
+      error: "Netlify Blobs is not connected. Redeploy the site after updating the API function."
+    });
+  }
+
   var pathname = apiPath(event);
   if (!pathname) return json(404, { error: "Not found" });
 
@@ -48,6 +59,10 @@ exports.handler = async function (event) {
     return json(result.status, result.body);
   } catch (error) {
     console.error(error);
-    return json(500, { error: "The server could not save that." });
+    return json(500, {
+      error: error && error.message
+        ? String(error.message)
+        : "The server could not save that."
+    });
   }
 };

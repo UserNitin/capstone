@@ -29,12 +29,21 @@ function api(path, options) {
       return {};
     }).then(function (data) {
       if (!response.ok) {
-        var error = new Error(data.error || "The server could not save that.");
+        var message = data.error;
+        if (!message) {
+          message = response.status === 404
+            ? "API not found. Open http://localhost:3000 and run: node server.js"
+            : "The server could not save that.";
+        }
+        var error = new Error(message);
         error.status = response.status;
         throw error;
       }
       return data;
     });
+  }).catch(function (error) {
+    if (error && error.status) throw error;
+    throw new Error("Cannot reach the API. Run node server.js and open http://localhost:3000");
   });
 }
 
